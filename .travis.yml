@@ -1,2 +1,6 @@
 language: android
-ant debug install test
+jdk: oraclejdk7
+
+android:
+  components:
+    - build-tools-19.0.1
