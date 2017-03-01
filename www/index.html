@@ -90,46 +90,12 @@
                     Chat
                 </div>
             </ons-toolbar>
-            <script>
-                var config = {
-                    apiKey: "AIzaSyC8kvg_NVt9tUcD0rnjKOGkqKmQ31piwx4",
-                    authDomain: "goattv-5c5f2.firebaseapp.com",
-                    databaseURL: "https://goattv-5c5f2.firebaseio.com",
-                    storageBucket: "goattv-5c5f2.appspot.com",
-                    messagingSenderId: "699495639169"
-                };
-                firebase.initializeApp(config);
-
-                function login() {
-                    var provider = new firebase.auth.TwitterAuthProvider();
-                    firebase.auth().signInWithCredential(provider).catch(function(error) {
-                        console.log("Error authenticating user:", error);
-                    });
-                }
-
-                function login_google() {
-                    var provider = new firebase.auth.GoogleAuthProvider();
-                    firebase.auth().signInWithCredential(provider).catch(function(error) {
-                        console.log("Error authenticating user:", error);
-                    });
-                }
-                firebase.auth().onAuthStateChanged(function(user) {
-                    if (user) {
-                        initChat(user);
-                    }
-                });
-
-                function initChat(user) {
-                    var chatRef = firebase.database().ref("chat");
-                    var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
-                    chat.setUser(user.uid, user.displayName);
-                }
-            </script>
-
-            <div id="firechat-wrapper" width=100% height=100%>
-                <button onclick="login_google('google')" class="btn btn-warning btn-large"><i class="icon-white icon-user"></i>Login with Google</button>
-                <button onclick="login('twitter')" class="btn btn-info btn-large"><i class="icon-white icon-user"></i>Login with Twitter</button>
+            <div id="chat">
+            
             </div>
+<script>
+  $("#chat").html("<iframe src=\"https://heark.github.io/goatapp/\" width="+window.innerWidth+" height="+window.innerHeight+">")
+</script>
         </ons-page>
     </ons-template>
 
