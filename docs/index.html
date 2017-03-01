@@ -33,14 +33,14 @@
 
                 function login() {
                     var provider = new firebase.auth.TwitterAuthProvider();
-                    firebase.auth().signInWithCredential(provider).catch(function(error) {
+                    firebase.auth().signInWithPopup(provider).catch(function(error) {
                         console.log("Error authenticating user:", error);
                     });
                 }
 
                 function login_google() {
                     var provider = new firebase.auth.GoogleAuthProvider();
-                    firebase.auth().signInWithCredential(provider).catch(function(error) {
+                    firebase.auth().signInWithPopup(provider).catch(function(error) {
                         console.log("Error authenticating user:", error);
                     });
                 }
