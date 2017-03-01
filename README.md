@@ -2,7 +2,7 @@
 Stream Live Cartoons on your phone!
 
 ## Source Info
-[![GitHub issues](https://img.shields.io/github/issues/Heark/goatapp.svg?style=flat-square)](https://github.com/Heark/goatapp/issues)[![GitHub forks](https://img.shields.io/github/forks/Heark/goatapp.svg?style=flat-square)](https://github.com/Heark/goatapp/network)[![GitHub stars](https://img.shields.io/github/stars/Heark/goatapp.svg?style=flat-square)](https://github.com/Heark/goatapp/stargazers)[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][Status!](https://img.shields.io/badge/Status-Working!-brightgreen.svg)
+[![GitHub issues](https://img.shields.io/github/issues/Heark/goatapp.svg?style=flat-square)](https://github.com/Heark/goatapp/issues)[![GitHub forks](https://img.shields.io/github/forks/Heark/goatapp.svg?style=flat-square)](https://github.com/Heark/goatapp/network)[![GitHub stars](https://img.shields.io/github/stars/Heark/goatapp.svg?style=flat-square)](https://github.com/Heark/goatapp/stargazers)[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][![Status!](https://img.shields.io/badge/Status-Working!-brightgreen.svg?style=flat-square)]
 # How to install?
 * Download the .apk file from [here](https://github.com/Heark/goatapp/releases/tag/v1.4.0-beta)
 * If you downloaded the apk on your phone transferred the file via another method skip the next step
