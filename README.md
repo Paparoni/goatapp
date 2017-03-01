@@ -1,6 +1,9 @@
 # Goat TV App
 Stream Live Cartoons on your phone!
 
+## Build Status
+[![Build Status](https://travis-ci.org/Heark/goatapp.svg?branch=master)](https://travis-ci.org/Heark/goatapp)
+
 # How to install?
 * Download the .apk file from [here](https://github.com/Heark/goatapp/releases/tag/v1.4.0-beta)
 * If you downloaded the apk on your phone transferred the file via another method skip the next step
