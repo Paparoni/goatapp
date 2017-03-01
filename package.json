@@ -6,6 +6,6 @@
   "repository": "",
   "author": "Antwaun Tune <founder@goattv.gq>",
   "dependencies": {
-    "cordova": "~0.9.14"
+    "cordova": "6.1.1"
   }
 }
