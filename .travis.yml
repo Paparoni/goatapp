@@ -20,7 +20,7 @@ install:
 script:
   - cordova prepare
   - cordova platform add android@3.7.0 --save
-  - cordova build android --release
+  - cordova-deploy --build --android --apk ./platforms/android/build/outputs/apk/android-debug.apk
   
 release:
   - exit 0  
