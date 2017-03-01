@@ -1,0 +1,11 @@
+{
+  "name": "GoatTV",
+  "version": "1.4.1",
+  "description": "Stream Cartoons!",
+  "main": "index.html",
+  "repository": "",
+  "author": "Antwaun Tune <founder@goattv.gq>",
+  "dependencies": {
+    "cordova": "~0.9.14"
+  }
+}
