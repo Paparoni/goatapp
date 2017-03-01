@@ -13,9 +13,6 @@ dependencies:
     - npm install -g cordova
     - npm install -g bamlab/cordova-deploy
     - npm install
-    - ionic state restore
-    - ionic prepare
-    - ./builds/sign-ios.sh
 test:
   override:
     - echo "Do your tests here"
