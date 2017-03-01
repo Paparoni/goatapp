@@ -1,1 +1,2 @@
 language: android
+ant debug install test
