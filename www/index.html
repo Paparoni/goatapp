@@ -1,105 +1,154 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-  <script src="components/loader.js"></script>
-  <script src="lib/onsenui/js/onsenui.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css" />
+    <script src="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
 
-  <link rel="stylesheet" href="components/loader.css">
-  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
-  <link rel="stylesheet" href="css/style.css">
+    <script>
+        ons.ready(function() {
+            console.log("Onsen UI is ready!");
+        });
 
-  <script>
-    ons.ready(function() {
-      console.log("Onsen UI is ready!");
-    });
-
-    window.fn = {};
-    window.fn.open = function() {
-      var menu = document.getElementById('menu');
-      menu.open();
-    };
-    window.fn.load = function(page) {
-      var content = document.getElementById('content');
-      var menu = document.getElementById('menu');
-      content
-        .load(page)
-        .then(menu.close.bind(menu));
-    };
-
-  </script>
+        window.fn = {};
+        window.fn.open = function() {
+            var menu = document.getElementById('menu');
+            menu.open();
+        };
+        window.fn.load = function(page) {
+            var content = document.getElementById('content');
+            var menu = document.getElementById('menu');
+            content
+                .load(page)
+                .then(menu.close.bind(menu));
+        };
+    </script>
 </head>
+
 <body>
-  <ons-splitter>
-    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
-      <ons-page>
-        <ons-list>
-          <ons-list-item onclick="fn.load('home.html')" tappable>
-            Home
-          </ons-list-item>
-          <ons-list-item onclick="fn.load('settings.html')" tappable>
-            Chat
-          </ons-list-item>
-          <ons-list-item onclick="fn.load('about.html')" tappable>
-            About
-          </ons-list-item>
-        </ons-list>
-      </ons-page>
-    </ons-splitter-side>
-    <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
-  </ons-splitter>
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+            <ons-page>
+                <ons-list>
+                    <ons-list-item onclick="fn.load('home.html')" tappable>
+                        Home
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('settings.html')" tappable>
+                        Chat
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('about.html')" tappable>
+                        About
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+    </ons-splitter>
 
-  <ons-template id="home.html">
-    <ons-page>
-      <ons-toolbar>
-        <div class="left">
-          <ons-toolbar-button onclick="fn.open()">
-            <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
-          </ons-toolbar-button>
-        </div>
-        <div class="center">
-          Live
-        </div>
-      </ons-toolbar>
-        <iframe id="tv" src='http://app.viloud.tv/player/embed/channel/e05983061b2d05a50d582c3d6355bde8?autoplay=1&volume=1&random=0&controls=1&title=1&share=0' width=100% height=100% frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    <script>document.getElementById('tv').click();</script>
-   </ons-page>
-  </ons-template>
+    <ons-template id="home.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Live
+                </div>
+            </ons-toolbar>
+            <iframe id="tv" src='http://app.viloud.tv/player/embed/channel/e05983061b2d05a50d582c3d6355bde8?autoplay=1&volume=1&random=0&controls=1&title=1&share=0' width=100% height=100% frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <script>
+                document.getElementById('tv').click();
+            </script>
+        </ons-page>
+    </ons-template>
 
-  <ons-template id="settings.html">
-  <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-      <div class="center">
-        Chat
-      </div>
-    </ons-toolbar>
-    Coming soon
-  </ons-page>
-  </ons-template>
+    <ons-template id="settings.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Chat
+                </div>
+            </ons-toolbar>
+            <script>
+                var config = {
+                    apiKey: "AIzaSyC8kvg_NVt9tUcD0rnjKOGkqKmQ31piwx4",
+                    authDomain: "goattv-5c5f2.firebaseapp.com",
+                    databaseURL: "https://goattv-5c5f2.firebaseio.com",
+                    storageBucket: "goattv-5c5f2.appspot.com",
+                    messagingSenderId: "699495639169"
+                };
+                firebase.initializeApp(config);
 
-  <ons-template id="about.html">
-  <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-      <div class="center">
-        About
-      </div>
-    </ons-toolbar>
-    App Created by Aj
-  </ons-page>
-  </ons-template>
+                function login() {
+                    var provider = new firebase.auth.TwitterAuthProvider();
+                    firebase.auth().signInWithPopup(provider).catch(function(error) {
+                        console.log("Error authenticating user:", error);
+                    });
+                }
+
+                function login_google() {
+                    var provider = new firebase.auth.GoogleAuthProvider();
+                    firebase.auth().signInWithPopup(provider).catch(function(error) {
+                        console.log("Error authenticating user:", error);
+                    });
+                }
+                firebase.auth().onAuthStateChanged(function(user) {
+                    if (user) {
+                        initChat(user);
+                    }
+                });
+
+                function initChat(user) {
+                    var chatRef = firebase.database().ref("chat");
+                    var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
+                    chat.setUser(user.uid, user.displayName);
+                }
+            </script>
+
+            <div id="firechat-wrapper" width=100% height=100%>
+                <button onclick="login_google('google')" class="btn btn-warning btn-large"><i class="icon-white icon-user"></i>Login with Google</button>
+                <button onclick="login('twitter')" class="btn btn-info btn-large"><i class="icon-white icon-user"></i>Login with Twitter</button>
+            </div>
+        </ons-page>
+    </ons-template>
+
+    <ons-template id="about.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    About
+                </div>
+            </ons-toolbar>
+            App Created by Antwaun Tune
+          <a href="https://github.com/Heark/goatapp/">View Source</a>
+        </ons-page>
+    </ons-template>
 
 </body>
+
 </html>
