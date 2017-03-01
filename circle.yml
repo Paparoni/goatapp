@@ -8,10 +8,10 @@ general:
     - master
 dependencies:
   override:
-    - sudo npm cache clean
-    - sudo npm install -g ionic
-    - sudo npm install -g cordova
-    - sudo npm install -g bamlab/cordova-deploy
+    - npm cache clean
+    - npm install -g ionic
+    - npm install -g cordova
+    - npm install -g bamlab/cordova-deploy
     - npm install
     - ionic state restore
     - ionic prepare
