@@ -22,4 +22,4 @@ deployment:
     branch: master
     commands:
       - cordova platform add android@3.7.0 --save
-      - cordova-deploy --build --android --ios --iosid $HOCKEY_IOS_APP_ID --apikey $HOCKEY_API_KEY --apk ./platforms/android/build/outputs/apk/android-debug.apk --andid  $HOCKEY_ANDROID_APP_ID --notes "Version générée automatiquement par $CIRCLE_USERNAME"
+      - cordova-deploy --build --android --apk ./platforms/android/build/outputs/apk/android-debug.apk
