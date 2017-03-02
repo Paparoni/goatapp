@@ -44,6 +44,18 @@
                         console.log("Error authenticating user:", error);
                     });
                 }
+                   function login_facebook() {
+                    var provider = new firebase.auth.FacebookAuthProvider();
+                    firebase.auth().signInWithPopup(provider).catch(function(error) {
+                        console.log("Error authenticating user:", error);
+                    });
+                }
+                   function login_github() {
+                    var provider = new firebase.auth.GithubAuthProvider();
+                    firebase.auth().signInWithPopup(provider).catch(function(error) {
+                        console.log("Error authenticating user:", error);
+                    });
+                }
                 firebase.auth().onAuthStateChanged(function(user) {
                     if (user) {
                         initChat(user);
@@ -58,8 +70,12 @@
             </script>
 
             <div id="firechat-wrapper" width=100% height=100%>
+                <center>
                 <button onclick="login_google('google')" class="btn btn-warning btn-large"><i class="icon-white icon-user"></i>Login with Google</button>
                 <button onclick="login('twitter')" class="btn btn-info btn-large"><i class="icon-white icon-user"></i>Login with Twitter</button>
+                <button onclick="login_facebook('facebook')" class="btn btn-primary btn-large"><i class="icon-white icon-user"></i> Login With Facebook</button>
+                <button onclick="login_github('github')" class="btn btn-inverse btn-large"><i class="icon-white icon-user"></i> Login With Github</button>
+                </center>
         </div>
 </body>
 
