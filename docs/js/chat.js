@@ -1725,7 +1725,8 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
         return _.escape(token);
       }
     }).join(' ');
-    message.message = self.trimWithEllipsis(message.message, self.maxLengthMessage);
+    console.log(self.trimWithEllipsis(message.message, self.maxLengthMessage))
+    message.message = e_filter(self.trimWithEllipsis(message.message, self.maxLengthMessage));
 
     // Populate and render the message template.
     var template = FirechatDefaultTemplates["templates/message.html"];
@@ -1741,8 +1742,8 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
         // Haven't added the scrollbar yet
         scrollToBottom = true;
       }
-
-      $messages.append(e_filter($message));
+      console.log($message)
+      $messages.append($message);
 
       if (scrollToBottom) {
         $messages.scrollTop($messages[0].scrollHeight);
