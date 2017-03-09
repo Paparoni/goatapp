@@ -470,7 +470,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
           userId: self._userId,
           name: self._userName,
           timestamp: firebase.database.ServerValue.TIMESTAMP,
-          message: e_filter(messageContent),
+          message: messageContent,
           type: messageType || 'default'
         },
         newMessageRef;
@@ -1742,7 +1742,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
         scrollToBottom = true;
       }
 
-      $messages.append($message);
+      $messages.append(e_filter($message));
 
       if (scrollToBottom) {
         $messages.scrollTop($messages[0].scrollHeight);
