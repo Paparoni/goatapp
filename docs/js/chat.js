@@ -274,7 +274,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
     _onNewMessage: function(roomId, snapshot) {
       var message = snapshot.val();
       message.id = snapshot.key;
-      this._invokeEventCallbacks('message-add', roomId, e_filter(message));
+      this._invokeEventCallbacks('message-add', roomId, message);
     },
     _onRemoveMessage: function(roomId, snapshot) {
       var messageId = snapshot.key;
@@ -470,7 +470,7 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
           userId: self._userId,
           name: self._userName,
           timestamp: firebase.database.ServerValue.TIMESTAMP,
-          message: messageContent,
+          message: e_filter(messageContent),
           type: messageType || 'default'
         },
         newMessageRef;
