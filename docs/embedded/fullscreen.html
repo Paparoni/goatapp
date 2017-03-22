@@ -1,11 +1,49 @@
 <html>
-<head>
-</head>
- <style>
-   iframe{
-     overflow: hidden;
-   }
-  </style>
+ <head>
+ </head>
+  <body>
+   <style>
+    iframe.fullScreen {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+   </style>
+   <script>
+    function requestFullScreen(element) {
+    // Supports most browsers and their versions.
+    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
 
-<div id="video"><center><iframe id="video" frameBorder="0" style="width: 100%; height: 100%;   display: block; position: absolute; left: 10%; -webkit-transform: translate(-10%, 0); " src="https://app.viloud.tv/player/embed/channel/e05983061b2d05a50d582c3d6355bde8?autoplay=1&amp;volume=1&amp;random=0&amp;controls=1&amp;title=1&amp;share=0"></iframe><iframe id="video-overlay" frameBorder="0" style="width:100%; height: 100%; display: block;    position: absolute;    left: 10%; -webkit-transform: translate(-10%, 0); " src="https://www.tipeeestream.com/scenes/58ba26549be18/view?menu=0#00359712189cc802ce978fcbe35c884031161ff2"></iframe></center></div>
+    if (requestMethod) { // Native full screen.
+        requestMethod.call(element);
+    } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+            wscript.SendKeys("{F11}");
+        }
+    }
+}
+
+function makeFullScreen() {
+    document.getElementsByTagName("iframe")[0].className = "fullScreen";
+    var elem = document.body;
+    requestFullScreen(elem);
+}
+   </script>
+   <script>
+    window.onload = function(){
+     makeFullScreen()
+     document.onkeypress = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        window.close();
+    }
+};
+    }
+   </script>
+<iframe src="https://heark.github.io/goatapp/embedded/fullscreen.html" frameBorder="0" scrolling="no"></iframe><br />
+ </body>
 </html>
