@@ -47,15 +47,19 @@
             var popup = window.open('https://www.goattv.me/fullscreen/fullscreen.html', 'popup_window', params);
             popup.moveTo(0, 0);
         }
+
         function muteVideo() {
             parent.mute()
             $("#muteButton").attr('onClick', 'unmuteVideo()')
-$(this).find($(".fa")).removeClass('fa fa-volume-up').addClass('fa fa-volume-off');           }
-        
+            $(this).find($(".fa")).removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
+        }
+        }
+
         function unmuteVideo() {
-          parent.unmute()
+            parent.unmute()
             $("#muteButton").attr('onClick', 'muteVideo()')
-$(this).find($(".fa")).removeClass('fa fa-volume-off').addClass('fa fa-volume-up');           }
+            $(this).find($(".fa")).removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
+        }
         }
     </script>
     <div id="controls-container">
@@ -63,15 +67,15 @@ $(this).find($(".fa")).removeClass('fa fa-volume-off').addClass('fa fa-volume-up
             <font color="white"><button alt="Fullscreen" onClick="fullscreen()" class="btn btn-mini black-background white"><i class="fa fa-arrows"></i></button>
                 </i>
                 <font color="white"><button id="muteButton" alt="Mute" onClick="muteVideo()" class="btn btn-mini black-background white"><i id="#muteIcon" class="fa fa-volume-up"></i></button>
-                </i>
-                <font color="white"><button alt="Forums" onClick="window.open('https://goattv.me/index.php')" class="btn btn-mini black-background white"><i class="fa fa-comments"></i></button>
                     </i>
-                    <font color="white">
-                        <td align="right" style="vertical-align: top; float: right">
-                            <font face="Impact" size="2">Goat TV</font>
-                        </td>
+                    <font color="white"><button alt="Forums" onClick="window.open('https://goattv.me/index.php')" class="btn btn-mini black-background white"><i class="fa fa-comments"></i></button>
+                        </i>
+                        <font color="white">
+                            <td align="right" style="vertical-align: top; float: right">
+                                <font face="Impact" size="2">Goat TV</font>
+                            </td>
+                        </font>
                     </font>
-                </font>
         </div>
     </div>
     <script>
