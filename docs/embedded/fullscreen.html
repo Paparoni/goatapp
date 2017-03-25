@@ -1,19 +1,8 @@
+
 <html>
- <head>
- </head>
-  <body>
-   <style>
-    iframe.fullScreen {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-   </style>
-   <script>
-    function requestFullScreen(element) {
+<head>
+<script>
+function requestFullScreen(element) {
     // Supports most browsers and their versions.
     var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
 
@@ -32,16 +21,35 @@ function makeFullScreen() {
     var elem = document.body;
     requestFullScreen(elem);
 }
-   </script>
-   <script>
-     makeFullScreen()
-     document.onkeypress = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 27) {
-        window.close();
-    }
-};
-   </script>
-<iframe src="https://heark.github.io/goatapp/embedded/web-version.html" frameBorder="0" scrolling="no"></iframe><br />
- </body>
-</html>
+window.onload = (function(){
+        return function(){
+                makeFullScreen();
+         };
+    })();
+</script>
+</head>
+<meta></meta>
+<style>
+body, html { 
+   width:100% ;
+    height:100% ;
+    margin: 0;
+    overflow:hidden ;
+}
+
+iframe { width:100% ; // set your width here
+        height:100% ;
+    border:none ;
+}
+iframe.fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+<body>
+<iframe src="https://heark.github.io/goatapp/embedded/web-version.html" frameBorder="0" scrolling="no" width="100%" height="100%"></iframe><br />
+</body>
+</html>		
