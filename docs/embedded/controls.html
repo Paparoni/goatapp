@@ -1,4 +1,3 @@
-
 <html>
 
 <head>
@@ -48,17 +47,54 @@
             var popup = window.open('https://www.goattv.me/fullscreen/fullscreen.html', 'popup_window', params);
             popup.moveTo(0, 0);
         }
+
         function muteVideo() {
             parent.mute()
             $("#muteButton").attr('onClick', 'unmuteVideo()')
             $(this).find($(".fa")).removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
-        
+
         }
+
         function unmuteVideo() {
             parent.unmute()
             $("#muteButton").attr('onClick', 'muteVideo()')
             $(this).find($(".fa")).removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
-        
+
+        }
+        var idleTime = 0;
+        $(document).ready(function() {
+            $("html").mouseenter(function() {
+                $("#controls").css({
+                    "opacity": ".75"
+                })
+            })
+            $("html").mouseleave(function() {
+                $("#controls").css({
+                    "opacity": "0"
+                })
+            })
+            //Increment the idle time counter every minute.
+            var idleInterval = setInterval(timerIncrement, 1000); // 1 minute
+
+            //Zero the idle timer on mouse movement.
+            $(this).mousemove(function(e) {
+                idleTime = 0;
+                $("#controls").css({
+                    "opacity": ".75"
+                })
+            });
+            $(this).keypress(function(e) {
+                idleTime = 0;
+            });
+        });
+
+        function timerIncrement() {
+            idleTime = idleTime + 1;
+            if (idleTime > 2) { // 2 minutes
+                $("#controls").css({
+                    "opacity": "0"
+                })
+            }
         }
     </script>
     <div id="controls-container">
@@ -74,21 +110,10 @@
                                 <font face="Impact" size="2">Goat TV</font>
                             </td>
                         </font>
-                    </font>
+                  </font>
         </div>
     </div>
-    <script>
-        $("html").mouseenter(function() {
-            $("#controls").css({
-                "opacity": ".75"
-            })
-        })
-        $("html").mouseleave(function() {
-            $("#controls").css({
-                "opacity": "0"
-            })
-        })
-    </script>
+
 </body>
 
 </html>
