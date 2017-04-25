@@ -258,15 +258,12 @@
 }
 #firechat strong {
   font-weight: bold;
-  font-color: #ffffff;
 }
 #firechat em {
   font-style: italic;
-  font-color: #ffffff;
 }
 #firechat label {
   display: block;
-  font-color: #ffffff;
 }
 #firechat a {
   color: #005580;
@@ -288,7 +285,6 @@
   margin: 10px 0;
   font-family: inherit;
   font-weight: bold;
-  font-color: #ffffff;
   line-height: 20px;
   color: inherit;
 }
@@ -299,31 +295,24 @@
 }
 #firechat h1 {
   font-size: 38.5px;
-  font-color: #ffffff;
 }
 #firechat h2 {
   font-size: 31.5px;
-  font-color: #ffffff;
 }
 #firechat h3 {
   font-size: 24.5px;
-  font-color: #ffffff;
 }
 #firechat h4 {
   font-size: 17.5px;
-  font-color: #ffffff;
 }
 #firechat h5 {
   font-size: 14px;
-  font-color: #ffffff;
 }
 #firechat h6 {
   font-size: 11.9px;
-  font-color: #ffffff;
 }
 #firechat small {
   font-size: 90%;
-  font-color: #ffffff;
 }
 /* Component: Tabs
 ============================================================ */
@@ -332,14 +321,14 @@
 }
 #firechat .nav > li > a {
   display: block;
-  background-color: #424242;
+  background-color: #eeeeee;
   text-decoration: none;
   overflow: hidden;
   white-space: nowrap;
 }
 #firechat .nav > li > a:hover,
 #firechat .nav > li > a:focus {
-  background-color: #424242;
+  background-color: #ffffff;
 }
 #firechat .nav-tabs {
   border-bottom: 1px solid #ddd;
@@ -373,7 +362,7 @@
 #firechat .nav-tabs > .active > a:hover,
 #firechat .nav-tabs > .active > a:focus {
   border-bottom-color: transparent;
-  background-color: #424242;
+  background-color: #ffffff;
   cursor: default;
 }
 #firechat .tab-content {
@@ -384,7 +373,7 @@
 }
 #firechat .tab-content > .active {
   display: block;
-  background-color: #424242;
+  background-color: #ffffff;
 }
 /* Component: dropdowns
 ============================================================ */
@@ -442,7 +431,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #424242;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -464,7 +453,7 @@
   clear: both;
 }
 #firechat .firechat-dropdown-menu ul {
-  background-color: #424242;
+  background-color: #ffffff;
   list-style: none;
   overflow-y: scroll;
   max-height: 300px;
@@ -474,7 +463,6 @@
   padding: 1px 1px 1px 3px;
   clear: both;
   font-weight: normal;
-  font-color: #ffffff;
   line-height: 20px;
   color: #333333;
   white-space: nowrap;
@@ -488,7 +476,7 @@
 #firechat .firechat-dropdown-menu ul > .active > a:hover,
 #firechat .firechat-dropdown-menu ul > .active > a:focus {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   background-color: #d9edf7;
   outline: 0;
 }
@@ -505,14 +493,14 @@
   position: relative;
   width: 100%;
   padding: 10px 0;
-  background-color: #424242;
+  background-color: #eeeeee;
   border-bottom: 1px solid #cccccc;
 }
 #firechat .firechat-dropdown-footer {
   position: relative;
   width: 100%;
   padding: 10px 0px;
-  background-color: #424242;
+  background-color: #eeeeee;
   border-top: 1px solid #cccccc;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -562,16 +550,15 @@
 #firechat .prompt {
   position: absolute;
   z-index: 1001;
-  background-color: #424242;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
 }
 #firechat .prompt-header {
   padding: 4px 8px;
-  font-color: #ffffff;
   font-weight: bold;
-  background-color: #424242;
+  background-color: #eeeeee;
   border: 1px solid #cccccc;
   -webkit-border-top-right-radius: 4px;
   -webkit-border-bottom-right-radius: 0;
@@ -588,7 +575,6 @@
 }
 #firechat .prompt-header a.close {
   opacity: 0.6;
-  font-color: #ffffff;
   font-size: 13px;
   margin-top: 2px;
 }
@@ -596,14 +582,14 @@
   opacity: 0.9;
 }
 #firechat .prompt-body {
-  background-color: #424242;
+  background-color: #ffffff;
   padding: 4px 8px;
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
 }
 #firechat .prompt-footer {
   padding: 4px 8px;
-  background-color: #424242;
+  background-color: #eeeeee;
   border: 1px solid #cccccc;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 4px;
@@ -643,7 +629,6 @@
   *display: inline;
   *zoom: 1;
   padding: 2px 5px;
-  font-color: #ffffff;
   margin-bottom: 0;
   text-align: center;
   vertical-align: middle;
@@ -652,13 +637,13 @@
   font-size: 12px;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #424242, #636262);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#424242), to(#636262));
-  background-image: -webkit-linear-gradient(top, #424242, #636262);
-  background-image: -o-linear-gradient(top, #424242, #636262);
-  background-image: linear-gradient(to bottom, #424242, #636262);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#424242', endColorstr='#636262', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #e6e6e6;
@@ -733,14 +718,13 @@
   border-radius: 4px;
 }
 #firechat .contextmenu ul {
-  background-color: #424242;
+  background-color: #ffffff;
   list-style: none;
 }
 #firechat .contextmenu ul > li > a {
   display: block;
   padding: 3px 10px;
   clear: both;
-  font-color: #ffffff;
   font-weight: normal;
   line-height: 20px;
   color: #333333;
@@ -769,7 +753,6 @@
   width: 100%;
   font-family: sans-serif;
   font-size: 12px;
-  font-color: #ffffff;
   line-height: 18px;
   padding: 2px 5px;
   border: 1px solid #cccccc;
@@ -794,7 +777,7 @@
 }
 #firechat input[disabled],
 #firechat textarea[disabled] {
-  background-color: #424242;
+  background-color: #eeeeee;
 }
 #firechat input {
   height: 24px;
@@ -810,7 +793,7 @@
   border: 1px solid #cccccc;
   margin: 0 5px;
   padding: 2px 5px;
-  background: #151515;
+  background: #ffffff;
 }
 #firechat .search-wrapper > input[type=text] {
   padding-left: 0px;
@@ -836,7 +819,7 @@
   vertical-align: top;
 }
 #firechat .message {
-  color: #ffffff;
+  color: #333;
   padding: 3px 5px;
   border-bottom: 1px solid #ccc;
 }
@@ -885,11 +868,11 @@
   height: 435px;
 }
 #firechat #firechat-tab-list {
-  background-color: #424242;
+  background-color: #ffffff;
 }
 #firechat #firechat-tab-content {
   width: 100%;
-  background-color: #424242;
+  background-color: #ffffff;
 }
 #firechat .tab-pane-menu {
   border: 1px solid #ccc;
