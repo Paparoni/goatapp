@@ -258,15 +258,12 @@
 }
 #firechat strong {
   font-weight: bold;
-  font-color: #ffffff;
 }
 #firechat em {
   font-style: italic;
-  font-color: #ffffff;
 }
 #firechat label {
   display: block;
-  font-color: #ffffff;
 }
 #firechat a {
   color: #005580;
@@ -288,7 +285,6 @@
   margin: 10px 0;
   font-family: inherit;
   font-weight: bold;
-  font-color: #ffffff;
   line-height: 20px;
   color: inherit;
 }
@@ -299,31 +295,24 @@
 }
 #firechat h1 {
   font-size: 38.5px;
-  font-color: #ffffff;
 }
 #firechat h2 {
   font-size: 31.5px;
-  font-color: #ffffff;
 }
 #firechat h3 {
   font-size: 24.5px;
-  font-color: #ffffff;
 }
 #firechat h4 {
   font-size: 17.5px;
-  font-color: #ffffff;
 }
 #firechat h5 {
   font-size: 14px;
-  font-color: #ffffff;
 }
 #firechat h6 {
   font-size: 11.9px;
-  font-color: #ffffff;
 }
 #firechat small {
   font-size: 90%;
-  font-color: #ffffff;
 }
 /* Component: Tabs
 ============================================================ */
@@ -442,7 +431,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #151515;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -474,7 +463,6 @@
   padding: 1px 1px 1px 3px;
   clear: both;
   font-weight: normal;
-  font-color: #ffffff;
   line-height: 20px;
   color: #333333;
   white-space: nowrap;
@@ -562,14 +550,13 @@
 #firechat .prompt {
   position: absolute;
   z-index: 1001;
-  background-color: #151515;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
 }
 #firechat .prompt-header {
   padding: 4px 8px;
-  font-color: #ffffff;
   font-weight: bold;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
@@ -588,7 +575,6 @@
 }
 #firechat .prompt-header a.close {
   opacity: 0.6;
-  font-color: #ffffff;
   font-size: 13px;
   margin-top: 2px;
 }
@@ -596,7 +582,7 @@
   opacity: 0.9;
 }
 #firechat .prompt-body {
-  background-color: #151515;
+  background-color: #ffffff;
   padding: 4px 8px;
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
@@ -643,7 +629,6 @@
   *display: inline;
   *zoom: 1;
   padding: 2px 5px;
-  font-color: #ffffff;
   margin-bottom: 0;
   text-align: center;
   vertical-align: middle;
@@ -733,14 +718,13 @@
   border-radius: 4px;
 }
 #firechat .contextmenu ul {
-  background-color: #151515;
+  background-color: #ffffff;
   list-style: none;
 }
 #firechat .contextmenu ul > li > a {
   display: block;
   padding: 3px 10px;
   clear: both;
-  font-color: #ffffff;
   font-weight: normal;
   line-height: 20px;
   color: #333333;
@@ -769,7 +753,6 @@
   width: 100%;
   font-family: sans-serif;
   font-size: 12px;
-  font-color: #ffffff;
   line-height: 18px;
   padding: 2px 5px;
   border: 1px solid #cccccc;
@@ -810,7 +793,7 @@
   border: 1px solid #cccccc;
   margin: 0 5px;
   padding: 2px 5px;
-  background: #151515;
+  background: #ffffff;
 }
 #firechat .search-wrapper > input[type=text] {
   padding-left: 0px;
@@ -885,11 +868,11 @@
   height: 435px;
 }
 #firechat #firechat-tab-list {
-  background-color: #151515;
+  background-color: #ffffff;
 }
 #firechat #firechat-tab-content {
   width: 100%;
-  background-color: #151515;
+  background-color: #ffffff;
 }
 #firechat .tab-pane-menu {
   border: 1px solid #ccc;
@@ -941,4 +924,21 @@
   background-position: -18px 0;
   width: 17px;
   height: 13px;
+}
+#firechat .icon.user-mute {
+  background-position: -84px 0;
+  width: 13px;
+  height: 13px;
+}
+#firechat .icon.user-mute.red {
+  background-position: -102px 0;
+  width: 13px;
+  height: 13px;
+}
+#firechat .icon:hover,
+#firechat .btn:hover > .icon {
+  opacity: 0.6;
+}
+#firechat a > .icon {
+  margin: 3px 1px;
 }
