@@ -339,7 +339,7 @@
 }
 #firechat .nav > li > a:hover,
 #firechat .nav > li > a:focus {
-  background-color: #ffffff;
+  background-color: #424242;
 }
 #firechat .nav-tabs {
   border-bottom: 1px solid #ddd;
@@ -442,7 +442,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #151515;
+  background-color: #424242;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -488,7 +488,7 @@
 #firechat .firechat-dropdown-menu ul > .active > a:hover,
 #firechat .firechat-dropdown-menu ul > .active > a:focus {
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   background-color: #d9edf7;
   outline: 0;
 }
@@ -562,7 +562,7 @@
 #firechat .prompt {
   position: absolute;
   z-index: 1001;
-  background-color: #151515;
+  background-color: #424242;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
@@ -596,7 +596,7 @@
   opacity: 0.9;
 }
 #firechat .prompt-body {
-  background-color: #151515;
+  background-color: #424242;
   padding: 4px 8px;
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
@@ -733,7 +733,7 @@
   border-radius: 4px;
 }
 #firechat .contextmenu ul {
-  background-color: #151515;
+  background-color: #424242;
   list-style: none;
 }
 #firechat .contextmenu ul > li > a {
@@ -885,11 +885,11 @@
   height: 435px;
 }
 #firechat #firechat-tab-list {
-  background-color: #151515;
+  background-color: #424242;
 }
 #firechat #firechat-tab-content {
   width: 100%;
-  background-color: #151515;
+  background-color: #424242;
 }
 #firechat .tab-pane-menu {
   border: 1px solid #ccc;
