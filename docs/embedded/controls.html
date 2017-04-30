@@ -51,14 +51,14 @@
         function muteVideo() {
             parent.mute()
             $("#muteButton").attr('onClick', 'unmuteVideo()')
-            $(this).find($(".fa")).removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
+            $('#controls').find($(".fa")).removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
 
         }
 
         function unmuteVideo() {
             parent.unmute()
             $("#muteButton").attr('onClick', 'muteVideo()')
-            $(this).find($(".fa")).removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
+            $('#controls').find($(".fa")).removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
 
         }
         var idleTime = 0;
