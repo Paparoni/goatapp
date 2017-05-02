@@ -46,18 +46,21 @@
 
             var popup = window.open('http://www.goattv.me/fullscreen/fullscreen.html', 'popup_window', params);
             popup.moveTo(0, 0);
+            document.getElementById("#fullscreen").blur();
         }
 
         function muteVideo() {
             parent.mute()
-            $("#muteButton").attr('onClick', 'unmuteVideo()')
+            $("#muteButton").attr('onClick', 'unmuteVideo()');
+            document.getElementById("#muteButton").blur();
             $('#controls').find($(".fa")).removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
 
         }
 
         function unmuteVideo() {
             parent.unmute()
-            $("#muteButton").attr('onClick', 'muteVideo()')
+            $("#muteButton").attr('onClick', 'muteVideo()');
+            document.getElementById("#muteButton").blur();
             $('#controls').find($(".fa")).removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
 
         }
@@ -99,7 +102,7 @@
     </script>
     <div id="controls-container">
         <div id="controls">
-            <font color="white"><button title="Fullscreen" onClick="fullscreen()" class="btn btn-mini black-background white"><i class="fa fa-arrows"></i></button>
+            <font color="white"><button id="fullscreen" title="Fullscreen" onClick="fullscreen()" class="btn btn-mini black-background white"><i class="fa fa-arrows"></i></button>
                 </i>
                 <font color="white"><button id="muteButton" title="Mute" onClick="muteVideo()" class="btn btn-mini black-background white"><i id="#muteIcon" class="fa fa-volume-up"></i></button>
                     </i>
