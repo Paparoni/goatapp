@@ -33,6 +33,44 @@
         .white {
             color: #ffffff;
         }
+        .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
     </style>
     <script>
         function fullscreen() {
@@ -46,13 +84,12 @@
 
             var popup = window.open('http://www.goattv.me/fullscreen/fullscreen.html', 'popup_window', params);
             popup.moveTo(0, 0);
-            document.getElementById("#fullscreen").blur();
         }
 
         function muteVideo() {
             parent.mute()
             $("#muteButton").attr('onClick', 'unmuteVideo()');
-            document.getElementById("#muteButton").blur();
+             $("mutetooltip").text("Unmute");
             $('#controls').find($(".fa")).removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
 
         }
@@ -60,7 +97,7 @@
         function unmuteVideo() {
             parent.unmute()
             $("#muteButton").attr('onClick', 'muteVideo()');
-            document.getElementById("#muteButton").blur();
+            $("mutetooltip").text("Mute");
             $('#controls').find($(".fa")).removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
 
         }
@@ -102,12 +139,21 @@
     </script>
     <div id="controls-container">
         <div id="controls">
+            <div id="fullscreentooltip" class="tooltip">
+             <span id="fullscreentttext" class="tooltiptext">Fullscreen</span>
             <font color="white"><button id="fullscreen" title="Fullscreen" onClick="fullscreen()" class="btn btn-mini black-background white"><i class="fa fa-arrows"></i></button>
                 </i>
+            </div>
+            <div id="mutetooltip" class="tooltip">
+                <span id="mutettext" class="tooltiptext">Mute</span>
                 <font color="white"><button id="muteButton" title="Mute" onClick="muteVideo()" class="btn btn-mini black-background white"><i id="#muteIcon" class="fa fa-volume-up"></i></button>
                     </i>
+            </div>
+            <div id="forumstooltip" class="tooltip">
+                <span id="forumstext" class="tooltiptext">Visit our Forums</span>
                     <font color="white"><button title="Forums" onClick="window.open('https://goattv.me/index.php')" class="btn btn-mini black-background white"><i class="fa fa-comments"></i></button>
                         </i>
+            </div>
                         <font color="white">
                             <td align="right" style="vertical-align: top; float: right">
                                 <font face="Impact" size="2">Goat TV</font>
