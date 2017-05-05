@@ -50,7 +50,8 @@
 
         function muteVideo() {
             parent.mute()
-            $("#muteButton").attr('onClick', 'unmuteVideo()')
+            $("#muteButton").attr('onClick', 'unmuteVideo()');
+            $("#muteButton").attr('title', 'Unmute')
             $('#controls').find($(".fa")).removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
 
         }
@@ -58,6 +59,7 @@
         function unmuteVideo() {
             parent.unmute()
             $("#muteButton").attr('onClick', 'muteVideo()')
+            $("#muteButton").attr('title', 'Mute');
             $('#controls').find($(".fa")).removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
 
         }
