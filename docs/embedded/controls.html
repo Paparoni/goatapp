@@ -90,8 +90,8 @@
         });
 
         function timerIncrement() {
-            idleTime = idleTime + 1;
-            if (idleTime > 2) { // 2 minutes
+            idleTime += 1
+            if (idleTime > 2) { // 2 seconds
                 $("#controls").css({
                     "opacity": "0"
                 })
@@ -108,12 +108,7 @@
                         </i>
                      <font color="red"><i class="fa fa-circle" aria-hidden="true"></i>
                         <font color="white">
-                           <p align="right">
                                <font face="Impact" size="2">On Air</font>
-                            </p>
-                            <p align="right" style="float: right">
-                                <font face="Impact" size="2">Goat TV</font>
-                            </p>
                         </font>
                   </font>
         </div>
