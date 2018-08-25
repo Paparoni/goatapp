@@ -2,8 +2,7 @@
 Stream Live Cartoons on your phone!
 
 ## Source Info
-[![GitHub issues](https://img.shields.io/github/issues/Heark/goatapp.svg?style=flat-square)](https://github.com/Heark/goatapp/issues)
-[![GitHub forks](https://img.shields.io/github/forks/Heark/goatapp.svg?style=flat-square)](https://github.com/Heark/goatapp/network)[![GitHub stars](https://img.shields.io/github/stars/Heark/goatapp.svg?style=flat-square)](https://github.com/Heark/goatapp/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/Paparoni/goatapp.svg?style=flat-square)(https://github.com/Paparoni/goatapp/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)]
 [![Status](https://img.shields.io/badge/Status-Working!-brightgreen.svg?style=flat-square)]
 # How to install?
