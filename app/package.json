@@ -1,0 +1,24 @@
+{
+  "name": "GoatTV",
+  "version": "1.0.0",
+  "description": "An app that streams fun cartoons 24/7",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . GoatTV"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "TV",
+    "cartoons",
+    "goattv",
+    "fun"
+  ],
+  "author": "GitHub",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^3.0.7",
+    "electron-packager": "^13.0.1"
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <style type="text/css">
+        body {
+            background-color: transparent;
+        }
+
+        #controls-container {}
+
+        #controls {
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 35px;
+            border: 1px;
+            opacity: 0;
+            text-align: left
+        }
+
+        .black-background {
+            background-color: #000000;
+        }
+
+        .white {
+            color: #ffffff;
+        }
+    </style>
+    <script type="text/javascript">
+        function fullscreen() {
+            parent.Fullscreen();
+        }
+
+        function muteVideo() {
+            parent.mute()
+            $("#muteButton").attr('onClick', 'unmuteVideo()');
+            $("#muteButton").attr('title', 'Unmute')
+            $('#controls').find($(".fa")).removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
+
+        }
+
+        function unmuteVideo() {
+            parent.unmute()
+            $("#muteButton").attr('onClick', 'muteVideo()')
+            $("#muteButton").attr('title', 'Mute');
+            $('#controls').find($(".fa")).removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
+
+        }
+        function playVideo(){
+            parent.play()
+        }
+        var idleTime = 0;
+        $(document).ready(function() {
+            
+            $("html").mouseenter(function() {
+                $("#controls").css({
+                    "opacity": ".75"
+                })
+            })
+            $("html").mouseleave(function() {
+                $("#controls").css({
+                    "opacity": "0"
+                })
+            })
+            //Increment the idle time counter every minute.
+            var idleInterval = setInterval(timerIncrement, 1000); // 1 minute
+
+            //Zero the idle timer on mouse movement.
+            $(this).mousemove(function(e) {
+                idleTime = 0;
+                $("#controls").css({
+                    "opacity": ".75"
+                })
+            });
+            $(this).keypress(function(e) {
+                idleTime = 0;
+            });
+        });
+
+        function timerIncrement() {
+            idleTime += 1
+            if (idleTime > 2) { // 2 seconds
+                $("#controls").css({
+                    "opacity": "0"
+                })
+            }
+        }
+    </script>
+    <div id="controls-container">
+        <div id="controls">
+            <font color="white"><button title="Play" onClick="playVideo()" class="btn btn-mini black-background white"><i class="fa fa-play"></i></button>
+                </i>
+            <font color="white"><button title="Fullscreen" onClick="fullscreen()" class="btn btn-mini black-background white"><i class="fa fa-arrows"></i></button>
+                </i>
+                <!--<font color="white"><button id="muteButton" title="Mute" onClick="muteVideo()" class="btn btn-mini black-background white"><i id="#muteIcon" class="fa fa-volume-up"></i></button>
+                    </i> -->
+                    <font color="white"><button title="Forums" onClick="window.open('https://goattv.ml/index.php')" class="btn btn-mini black-background white"><i class="fa fa-comments"></i></button>
+                        </i>
+                    <div id="on-air" style="float: right">
+                     <font color="red"><i class="fa fa-circle" aria-hidden="true"></i>
+                        <font color="white">
+                               <font face="Impact" size="2">On Air</font>
+                        </font>
+                  </font>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>GoatTV</title>
+</head>
+
+<body>
+    <iframe id="chat_frame" src="https://www.twitch.tv/embed/goattvlive/chat?darkpopout" scrolling="no"></iframe>
+    <iframe id="player_frame" src="player/player.html" scrolling="no"></iframe>
+    <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+        window.fullscreen = function(){
+            require('./renderer.js').fullscreenFunction();
+        }
+    </script>
+</body>
+
+</html>

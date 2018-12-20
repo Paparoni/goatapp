@@ -1,0 +1,23 @@
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+    background-color: black;
+}
+
+#chat_frame {
+	width: calc(25% - 4px);
+	height: 100%;
+	border: none;
+	overflow: hidden;
+}
+
+#player_frame {
+	width: calc(75% - 4px);
+	height: 100%;
+	border: none;
+	overflow: hidden;
+}
+
