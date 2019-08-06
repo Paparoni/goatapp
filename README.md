@@ -4,6 +4,7 @@ A weird website and web player for streaming 24/7 cartoons created with JavaScri
 # Desktop App
 Download windows app [here](https://github.com/Paparoni/goatapp/releases/tag/v0.0.2-alpha)
 
+## Credit
 Created by: Antwaun Tune<br/> 
 Email: <tuneantwaun@gmail.com><br/>
 Computer Science Student
@@ -17,3 +18,4 @@ Goat TV App was created completely in JavaScript, HTML, CSS and the Website uses
 * jQuery
 * Bootstrap
 * Firebase
+* Electron
