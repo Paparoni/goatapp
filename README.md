@@ -2,7 +2,7 @@
 A weird website and web player for streaming 24/7 cartoons created with JavaScript, HTML and CSS, http://goattv.ml
 
 # Desktop App
-Download windows [app here](https://github.com/Paparoni/goatapp/releases/tag/v0.0.2-alpha)
+Download windows app [here](https://github.com/Paparoni/goatapp/releases/tag/v0.0.2-alpha)
 
 Created by: Antwaun Tune<br/> 
 Email: <tuneantwaun@gmail.com><br/>
